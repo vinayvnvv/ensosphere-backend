@@ -1,6 +1,6 @@
 const SendOtp = require('sendotp');
 const ENV = require('./../../env');
-const sendOtp = new SendOtp(ENV.SMS_GATEWAY_KEY);
+const sendOtp = new SendOtp(ENV.SMS_GATEWAY_KEY, 'Your OTP for Endosphere 2.0 campaign is {{otp}}. Please do not share it with anybody.');
 
 class OTP {
     sendOtp(mobile, callback) {
